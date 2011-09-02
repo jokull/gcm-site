@@ -1,0 +1,12 @@
+Flask
+Flask-SqlAlchemy
+Flask-Assets
+Flask-Login
+-e git+git://github.com/jokull/fungiform.git#egg=Fungiform
+-e git+git://github.com/jokull/flask-fungiform.git#egg=Flask-Fungiform
+
+redis
+
+-e git+https://github.com/iplatform/pyFaceGraph.git#egg=pyFaceGraph
+
+-e git+https://github.com/Instagram/python-instagram.git#egg=Instagram

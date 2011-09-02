@@ -1,0 +1,9 @@
+domain: 
+    - www.globalchampionmonth.com
+aliases:
+    - globalchampionmonth.com
+services:
+    - files
+    - postgres
+workers: 4
+wsgi: 'gcm.app:app'

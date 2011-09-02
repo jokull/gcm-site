@@ -1,0 +1,223 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Meistaramánuðurinn</title>
+  
+  <meta name="description" content="30 dagar sem munu ögra þátttakendum líkamlega og andlega í átt að því að verða meistarar eigin lífs">
+  
+  <meta property="og:title" content="Meistaramánuðurinn">
+  <meta property="og:url" content="http://www.globalchampionmonth.com/">
+  <meta property="og:image" content="{{ url_for('.static', filename="images/favicon.png", v=g.deploy, _external=True) }}">
+  <meta property="fb:admins" content="704142018">
+  
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="{{ url_for('.static', filename="images/favicon.png", v=g.deploy) }}">
+  
+  <link rel="stylesheet" href="{{ url_for('.static', filename="css/base.css", v=g.deploy) }}">
+  <link rel="stylesheet" href="{{ url_for('.static', filename="css/skeleton.css", v=g.deploy) }}">
+  <link rel="stylesheet" href="{{ url_for('.static', filename="css/gcm.css", v=g.deploy) }}">
+  <link rel="stylesheet" href="{{ url_for('.static', filename="jquery-ui/jquery-ui-1.8.14.custom.css", v=g.deploy) }}">
+  
+  <script>
+  window.GCM = {{ js|tojson|safe }};
+  </script>
+  
+  <script type="text/template" id="tpl-friend">
+    <img src="<%= picture_url %>">
+    <a target="_blank" href="http://www.facebook.com/profile.php?id=<%= graph_id %>" class="name">
+      <%= name %>
+    </a>
+    <% if(blog_url){ %>
+      <a class="blog" href="<%= blog_url %>">Blogg</a>
+    <% } %>
+    <% if(twitter_name){ %>
+      <a class="twitter" href="http://twitter.com/<%= twitter_name %>">@<%= twitter_name %></a>
+    <% } %>
+  </script>
+
+  <script type="text/template" id="tpl-person">
+  
+    <h4 class=name><%= name %></h4>
+    
+    {% macro formfield(field, class_='') %}
+      <div class="clearfix {{ 'error' if field.errors }}">
+        {{ field.label() }}
+        <div class="input">
+          {{ field.render(class_=class_) }}
+        </div>
+      {% if field.errors %}
+        <span class="help-inline">
+        {% for message in field.errors %}
+          {{ message }}
+        {% endfor %}
+        </span>
+      {% endif %}
+      </div><!-- /clearfix -->
+    {% endmacro %}
+    
+    {% call form() %}
+      {{ formfield(form.blog_url) }}
+      {{ formfield(form.twitter_name) }}
+    {% endcall %}
+  </script>
+  
+</head>
+<body id="section-{% block section %}index{% endblock %}">
+  
+  <div id="overlay">
+    <div class="inner">
+    </div>
+  </div>
+  
+  <div id="content">
+    
+    <header class="container">
+      <div class="sixteen columns">
+        <h2>22. október 2011</h2>
+        <h1 id="punchout">Meistara<br>mánuður</h1>
+        <h3>Skoraðu á sjálfan þig - Lifðu eins og meistari í 30 daga</h3>
+      </div>
+    </header>
+    
+    <div class="section-1 container">
+      <div class="five columns">
+        <ul class="questions">
+          <li>
+            <h4>Hvað er Meistaramánuðurinn?</h4>
+            <p>30 dagar sem munu ögra þátttakendum líkamlega og andlega í átt að því að verða meistarar eigin lífs.</p>
+          </li>
+          <li>
+            <h4>Hverjir taka þátt?</h4>
+            <p>Allir sem vilja. Til að skrá þig og sjá hvaða vinir þínir eru að taka þátt gæti verið gaman að fylla út skráningarformið neðst á síðunni.</p>
+          </li>
+          <li>
+            <h4>Hverjar eru leikreglurnar?</h4>
+            <p>Það er í valdi hvers meistara að setja sér þann 
+              ramma sem skilgreinir meistaralegan lífsstíl.
+              Við leggjum til að þáttakendur sleppi
+              áfengisneyslu og bæti svo öðrum
+              markmiðum við þá miðju <br> sem 
+              meistararnir hafa sameiginlega.
+              Fyrir <br> þá sem eru örlítið "lost"
+              er ekki vitlaust <br> að kynna sér 
+              mataræði <br> forfeðranna, sem og 
+              lífsstíl þeirra.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="eleven columns">
+        <embed type="application/x-shockwave-flash" 
+               src="http://vimeo.com/moogaloop.swf?clip_id=23569694&amp;autoplay=0" 
+               width="640" height="359" 
+               quality="high" scale="scale" 
+               allowfullscreen="true" 
+               allowscriptaccess="never" 
+               salign="tl" wmode="opaque" flashvars="width=640&amp;height=359">
+      </div>
+      <div class="seperator"></div>
+    </div>
+    
+    <div class="container">
+      <div class="blog eleven columns">
+        
+        <!-- BLOG -->
+        <article class="hentry">
+          <div class="entry-header">
+            <abbr class="published" title="2011-08-17T00:00:00">
+              <a href="#">Miðvikudagur 17. ágúst 2011</a>
+            </abbr>
+            <h2><a href="#">Velkomin</a></h2>
+          </div>
+          <div class="entry-content eight columns alpha">
+            <p>For a recent design we decided to purposely ignore two out of three customer groups for the front page design. I will keep this trick in mind for future jobs. The message was clearer, and the groups left out were not ignored totally. Sometimes it is better to perceive a message not directed and tailored to you.</p>
+            <p>When you haven't identified your goal your message isn't going to be clear. Even worse, if you don't know who you are talking to the message will be seriously mangled and confusing. Just like in real life in fact. A segmented customer base can't all be addressed at the same time. Dell.com's front page still has links for "Small &amp; Medium Business", "Home" and something they've decided to call "Outlet". I can't think of a reason to differentiate a computer products lineup like this. The overall message has further negative connotations because it suggests that Dell really doesn't understand "me". Maybe I'm a developer working from home and my computer needs to be smack in between small business and home. Where's my place in the site hierarchy?</p>
+          </div>
+          <p class="permalink"><a href="#">Sjá athugasemdir</a></p>
+        </article>
+        
+      </div>
+      <div class="instagram five columns">
+        
+        <!-- INSTAGRAM -->
+        
+        <h3>Instagram #GCM</h3>
+        <p>Notið #GCM hashtaggið á Instagram til að deila myndum hér</p>
+        
+      </div>
+    </div>
+      
+    
+    <footer class="container">
+      
+      <div class="signup">
+        
+        <div class="person one-third column">&nbsp;</div>
+        
+        <div class="call-to-action one-third column">
+          <a href="#" class="login">
+            <img id="logo" src="{{ url_for('static', filename="images/logo.png") }}">
+          </a>
+          <h4>Smelltu á merkið til að sjá hvaða vinir þínir eru að taka þátt</h4>
+        </div>
+      
+        <ol class="friends one-third column"></ol>
+      
+      </div>
+        
+      <div class="like-button sixteen columns">
+        <iframe src="http://www.facebook.com/plugins/like.php?app_id=119121324855933&amp;href=http%3A%2F%2Fwww.globalchampionmonth.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
+      </div>
+      
+    </footer>
+    
+    
+  </div>
+  
+  {% assets "gcm" -%}
+  <script src="{{ ASSET_URL }}"></script>
+  {% endassets -%}
+  
+  <div id="fb-root"></div>
+    
+  <script>
+    (function() {
+      var e = document.createElement('script'); e.async = true;
+      e.src = document.location.protocol +
+        '//connect.facebook.net/en_US/all.js';
+      document.getElementById('fb-root').appendChild(e);
+    }());
+  </script>
+  
+  <script>
+    TypekitConfig = {
+      kitId: 'nzf8tvx',
+      timeout: 3000
+    };
+    (function() {
+      $('html').addClass('wf-loading');
+      var t = setTimeout(function() {
+        $('html').removeClass('wf-loading').addClass('wf-inactive');
+      }, TypekitConfig.scriptTimeout);
+      $.ajax({
+        url: '//use.typekit.com/' + TypekitConfig.kitId + '.js',
+        dataType: 'script',
+        cache: true,
+        success: function() {
+          clearTimeout(t);
+          try { Typekit.load(TypekitConfig); } catch (e) {}
+        }
+      });
+    })();
+  </script>
+  
+</body>
+</html>

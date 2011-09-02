@@ -1,0 +1,11 @@
+build
+bin
+.Python
+lib
+src
+include
+gcm/static/js
+gcm/config/*
+*.pyc
+.DS_Store
+uploads

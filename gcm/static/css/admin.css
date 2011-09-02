@@ -1,0 +1,6 @@
+ul li { line-height: 32px; list-style: none; }
+ul li .date { margin-left: .5em; font-size: 11pt; color: #CCC; }
+ul li .gameday { width: 30px; display: inline-block; font-weight: bold; }
+ul li .question { margin-left: .5em; font-size: 11pt; color: #222; }
+
+.container { padding-top: 30px; }

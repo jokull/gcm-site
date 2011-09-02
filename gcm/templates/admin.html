@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}Námuspurning dagsins</title>
+  
+  <link rel="stylesheet" href="{{ url_for('.static', filename="css/bootstrap-1.1.1.css", v=g.deploy) }}">
+  <link rel="stylesheet" href="{{ url_for('.static', filename="css/admin.css", v=g.deploy) }}">
+  
+  <script type="text/template" id="tpl-question">
+    <li>
+      <span class=gameday>#<%= gameday %></span>
+      <a href="<%= edit_url %>" class="btn secondary edit">Edit</a>
+      <a href="#" class="btn delete danger">Delete</a>
+      <span class=question><%= label %></span>
+      <span class=date><%= date_locale %></span>
+    </li>
+  </script>
+  
+  <script type="text/template" id="tpl-modal">
+    <!-- Modal -->
+    <div class="modal" style="position: absolute; left: 50%; top: 400px; margin-left: -250px z-index: 1">
+      <div class="modal-header">
+        <h3><%= header %></h3>
+        <a href="#" class="close dismiss">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p><%= help_text %></p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn primary confirm"><%= confirm %></a>
+        <a href="#" class="btn secondary dismiss"><%= dismiss %></a>
+      </div>
+    </div>
+  </script>
+  
+</head>
+<body>
+  
+
+  <div class="container">
+    
+    <div class="page-header">
+      <h1>Námuspurning dagsins</h1>
+    </div>
+    
+    <div class="content">
+  
+  
+      {% block content %}
+  
+      <ul class=questions>
+      </ul>
+      <div class="actions"><a class="btn" href="{{ url_for('add_question') }}">Ný spurning</a></div>
+    
+      {% endblock %}
+  
+      {% if js -%}
+      <script>SpurningDagsins = {{ js|tojson|safe }};</script>
+      {% assets "admin" -%}
+      <script src="{{ ASSET_URL }}"></script>
+      {% endassets -%}
+      {% endif -%}
+      
+    </div>
+    
+  </div>
+  
+</body>
+</html>
+
+
+
+
+
