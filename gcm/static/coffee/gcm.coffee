@@ -25,7 +25,16 @@ $ ->
           input.val "" if input.val() == input.attr "placeholder"
   
   ($ ".ie [placeholder]").placeholder()
-
+  
+  $.ajax
+    url: 'http://api.tumblr.com/v2/blog/sviti.tumblr.com/posts/json?api_key=' + GCM.tumblr_id
+    dataType: "jsonp"
+    jsonp: "jsonp"
+    success: (data, status) =>
+      GCM.collections.tumblr = new Tumblr
+      GCM.views.tumblr = new TumblrView collection: GCM.collections.tumblr
+      GCM.collections.tumblr.add  data.response.posts
+      
 
 
 class FriendView extends Backbone.View
@@ -34,14 +43,12 @@ class FriendView extends Backbone.View
   
   initialize: (options) ->
     @model.bind "change", @render
+    @render()
   
   render: =>
     tpl = _.template ($ "#tpl-friend").html()
     ($ @el).html (tpl @model.toJSON())
     return @
-  
-  initialize: (options) ->
-    @render()
 
 
 class Friend extends Backbone.Model
@@ -65,15 +72,52 @@ class Person extends Backbone.Model
   
 class PersonView extends Backbone.View
   
+  TIMEOUT_MS: 200
+  MIN_LENGTH: 2
+  
   el: ".person"
+  
+  events:
+    "blur :input": "submit"
+    "keydown :input": "keydown"
   
   initialize: (options) ->
     @model.bind "change", @render
     @render()
   
+  flash: (message) =>
+    $el = (@$ ".help_text").hide()
+    $el.html message
+    $el.slideDown "slow", =>
+      setTimeout(1500, -> $el.fadeOut "fast")
+  
   render: =>
     tpl = _.template ($ "#tpl-person").html()
     ($ @el).html (tpl @model.toJSON())
+    _.each (@$ "input"), (el) =>
+      name = (($ el).attr "name")
+      value = @model.attributes[name]
+      ($ el).val value if value
+  
+  blur: (e) =>
+    @submit(e)
+    
+  submit: (e) =>
+    url = (@$ "form").attr "action"
+    $.post url, (@$ ":input").serialize(), (data, status) =>
+      if data.errors
+        @flash data.errors[0]
+      else
+        GCM.models.person.set data
+        @flash "Vistað"
+  
+  keydown: (e) =>
+    clearTimeout @typing
+    switch e.keyCode
+      when ($.ui.keyCode.ENTER or $.ui.keyCode.NUMPAD_ENTER)
+        e.preventDefault()
+        @submit()
+    
 
 class LoginView extends Backbone.View
   
@@ -110,8 +154,3 @@ window.fbAsyncInit = ->
     backend_url: GCM.routes.connect
   GCM.views.login = new LoginView
   return
-
-
-
-
-    

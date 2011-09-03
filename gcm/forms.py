@@ -8,9 +8,11 @@ from flaskext.fungiform import (Form, IntegerField, TextField,
 
 twitter_username_re = re.compile(r'([A-Za-z0-9_]+)')
 
-def is_twitter_username(value):
+def is_twitter_username(form, value):
+    value = value.lstrip('@')
     if twitter_username_re.match(value) is None:
         raise ValidationError, u'Lítur ekki út fyrir að vera Twitter nafn'
+    return value
 
 class URLField(TextField):
     def convert(self, value):

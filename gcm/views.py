@@ -68,6 +68,7 @@ def gcm():
     js = dict(
         graph_id=current_app.config['GRAPH_API'][0],
         instagram_id=current_app.config['INSTAGRAM_API'][0],
+        tumblr_id=current_app.config['TUMBLR_API'][0],
         photos={
             'items': photos, 'max_tag_id': max_tag_id,
         },
@@ -87,7 +88,16 @@ def gcm():
 
 @app.route('/signup', methods=['POST'])
 def signup():
-    return jsonify(**current_user.json)
+    form = SignupForm()
+    if form.validate():
+        current_user.blog_url = form.data['blog_url']
+        current_user.twitter_name = form.data['twitter_name']
+        db.session.add(current_user)
+        db.session.commit()
+        response = current_user.json
+    else:
+        response = dict(errors=dict(form.errors))
+    return jsonify(**response)
 
 
 @app.route('/admin', methods=['GET'])

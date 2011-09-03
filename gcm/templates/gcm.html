@@ -30,6 +30,15 @@
   window.GCM = {{ js|tojson|safe }};
   </script>
   
+  <script type="text/template" id="tpl-tumblr-post">
+    <% if(title){ %>
+      <h2 class="title">
+        <a href="<%= post_url %>"><%= title %></a>
+      </h2>
+    <% } %>
+    <%= body %>
+  </script>
+   
   <script type="text/template" id="tpl-friend">
     <img src="<%= picture_url %>">
     <a target="_blank" href="http://www.facebook.com/profile.php?id=<%= graph_id %>" class="name">
@@ -67,6 +76,9 @@
       {{ formfield(form.blog_url) }}
       {{ formfield(form.twitter_name) }}
     {% endcall %}
+    
+    <p class="help_text"></p>
+    
   </script>
   
 </head>
@@ -129,20 +141,9 @@
     <div class="container">
       <div class="blog eleven columns">
         
-        <!-- BLOG -->
-        <article class="hentry">
-          <div class="entry-header">
-            <abbr class="published" title="2011-08-17T00:00:00">
-              <a href="#">Miðvikudagur 17. ágúst 2011</a>
-            </abbr>
-            <h2><a href="#">Velkomin</a></h2>
-          </div>
-          <div class="entry-content eight columns alpha">
-            <p>For a recent design we decided to purposely ignore two out of three customer groups for the front page design. I will keep this trick in mind for future jobs. The message was clearer, and the groups left out were not ignored totally. Sometimes it is better to perceive a message not directed and tailored to you.</p>
-            <p>When you haven't identified your goal your message isn't going to be clear. Even worse, if you don't know who you are talking to the message will be seriously mangled and confusing. Just like in real life in fact. A segmented customer base can't all be addressed at the same time. Dell.com's front page still has links for "Small &amp; Medium Business", "Home" and something they've decided to call "Outlet". I can't think of a reason to differentiate a computer products lineup like this. The overall message has further negative connotations because it suggests that Dell really doesn't understand "me". Maybe I'm a developer working from home and my computer needs to be smack in between small business and home. Where's my place in the site hierarchy?</p>
-          </div>
-          <p class="permalink"><a href="#">Sjá athugasemdir</a></p>
-        </article>
+        <div id="tumblr">
+          
+        </div>
         
       </div>
       <div class="instagram five columns">
@@ -169,7 +170,11 @@
           <h4>Smelltu á merkið til að sjá hvaða vinir þínir eru að taka þátt</h4>
         </div>
       
-        <ol class="friends one-third column"></ol>
+        <div class="one-third column">
+          <ol class="friends">
+            
+          </ol>
+        </div>
       
       </div>
         

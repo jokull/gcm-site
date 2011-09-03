@@ -21,11 +21,11 @@ div.seperator { position: absolute; width: 940px; height: 175px;
                 background: url(../images/pattern-1.png) left bottom no-repeat; }
 
 div.blog { padding: 20px 0; }
-article { margin-bottom: 30px; }
-article .entry-header { margin-bottom: 20px; }
-article h2 a { border: 0; font-weight: bold; }
-article p { line-height: 130%; font-size: 11pt; }
-article p.permalink { text-align: right; width: 100%; }
+#tumblr { margin-bottom: 30px; }
+#tumblr h2.title { margin-bottom: 20px; }
+#tumblr h2 a { border: 0; font-weight: bold; }
+#tumblr p { line-height: 130%; font-size: 11pt; }
+#tumblr p.permalink { text-align: right; width: 100%; }
 
 div.instagram { padding: 20px 0; }
 
@@ -33,3 +33,8 @@ footer .signup { padding: 100px 0; }
 footer .signup .login { border: 0; }
 footer .signup .login img { padding-bottom: 20px; }
 footer .signup .call-to-action { text-align: center; }
+
+footer .signup .friends { list-style: none; margin: 0; }
+footer .signup .friends img { border-radius: 25px; vertical-align: -25px; margin-right: 6px; }
+
+.help_text { font-weight: bold; color: white; }

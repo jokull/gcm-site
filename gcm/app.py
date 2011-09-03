@@ -19,9 +19,11 @@ assets = Environment(app)
 assets.register('gcm', Bundle(
     'lib/modernizer-2.0.6.js',
     'lib/jquery-1.6.1.js', 
+    'jquery-ui/jquery-ui-1.8.14.custom.js', 
     'lib/underscore.js', 
     'lib/backbone.js', 
     'js/auth.js', 
+    'js/tumblr.js',
     'js/gcm.js', 
     # filters='jsmin', 
     output='gen/gcm.js'))
