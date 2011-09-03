@@ -34,7 +34,15 @@ $ ->
       GCM.collections.tumblr = new Tumblr
       GCM.views.tumblr = new TumblrView collection: GCM.collections.tumblr
       GCM.collections.tumblr.add  data.response.posts
-      
+  
+  $.ajax
+    url: 'https://api.instagram.com/v1/tags/champion/media/recent?count=5&client_id=' + GCM.instagram_id
+    dataType: "jsonp"
+    success: (data, status) =>
+      GCM.collections.instagram = new Instagram
+      GCM.views.instagram = new InstagramView collection: GCM.collections.instagram
+      GCM.collections.instagram.add  data.data
+    
 
 
 class FriendView extends Backbone.View

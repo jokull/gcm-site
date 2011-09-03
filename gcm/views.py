@@ -14,7 +14,6 @@ from .app import app, db
 from .models import Person
 from .auth import requires_basic_auth
 from .forms import SignupForm
-from ._instagram import get_photos
 
 
 @app.route('/connect', methods=['POST'])
@@ -53,33 +52,19 @@ def connect():
     return jsonify(**response)
 
 
-@app.route('/photos', methods=['GET'])
-@app.route('/photos/page-<page>', methods=['GET'])
-def photos(page=None):
-    photos, max_tag_id = [], '' # get_photos(page)
-    return jsonify(photos=photos, max_tag_id=max_tag_id)
-    
-
 @app.route('/', methods=['GET'])
 def gcm():
-    
-    photos, max_tag_id = [], '' # get_photos(page)
     
     js = dict(
         graph_id=current_app.config['GRAPH_API'][0],
         instagram_id=current_app.config['INSTAGRAM_API'][0],
         tumblr_id=current_app.config['TUMBLR_API'][0],
-        photos={
-            'items': photos, 'max_tag_id': max_tag_id,
-        },
         routes={
             'static': url_for('static', filename="", _external=True),
             'connect': url_for('connect'),
-            'photos': url_for('photos'),
             'signup': url_for('signup'),
         }
     )
-    
     
     form = SignupForm(action=url_for('signup')).as_widget()
         

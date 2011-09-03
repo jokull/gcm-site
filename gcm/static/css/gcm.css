@@ -10,6 +10,8 @@ a, a:active, a:hover, a:visited { color: #FFFFFF; text-decoration: none;
 
 header {  }
 header * { text-align: center; }
+body { visibility: hidden; }
+.wf-active body * { visibility: visible; }
 header h1 { font-family: quatro-slab; text-transform: uppercase; font-size: 90pt; }
 header h2 { font-weight: bold; }
 header h3 { font-weight: bold; margin-bottom: 60px; }
@@ -24,10 +26,16 @@ div.blog { padding: 20px 0; }
 #tumblr { margin-bottom: 30px; }
 #tumblr h2.title { margin-bottom: 20px; }
 #tumblr h2 a { border: 0; font-weight: bold; }
-#tumblr p { line-height: 130%; font-size: 11pt; }
+#tumblr p { line-height: 130%; font-size: 12pt; }
 #tumblr p.permalink { text-align: right; width: 100%; }
 
 div.instagram { padding: 20px 0; }
+#instagram .post { padding: 5px; background: white; margin-bottom: 12px; }
+#instagram .post img { width: 270px; height: 270px; }
+#instagram .post p { margin-bottom: 4px; }
+#instagram .post .user { color: black; font-size: 12pt; }
+#instagram .post .date,
+#instagram .post .caption { display: none; }
 
 footer .signup { padding: 100px 0; }
 footer .signup .login { border: 0; }

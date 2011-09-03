@@ -38,17 +38,25 @@
     <% } %>
     <%= body %>
   </script>
+  
+  <script type="text/template" id="tpl-instagram-post">
+    <a href="<%= link %>"><img src="<%= images.low_resolution.url %>"></a>
+    <p class="date"><%= created_time %></p>
+    <p class="user">@<%= user.username %></p>
+    <% if(caption){ %>
+    <p class="caption"><%= caption.text %></p>
+    <% } %>
+  </script>
    
   <script type="text/template" id="tpl-friend">
     <img src="<%= picture_url %>">
     <a target="_blank" href="http://www.facebook.com/profile.php?id=<%= graph_id %>" class="name">
-      <%= name %>
-    </a>
+      <%= name %></a>
     <% if(blog_url){ %>
-      <a class="blog" href="<%= blog_url %>">Blogg</a>
+      [<a class="blog" href="<%= blog_url %>">Blogg</a>]
     <% } %>
     <% if(twitter_name){ %>
-      <a class="twitter" href="http://twitter.com/<%= twitter_name %>">@<%= twitter_name %></a>
+      [<a class="twitter" href="http://twitter.com/<%= twitter_name %>">@<%= twitter_name %></a>]
     <% } %>
   </script>
 
@@ -150,8 +158,10 @@
         
         <!-- INSTAGRAM -->
         
-        <h3>Instagram #GCM</h3>
-        <p>Notið #GCM hashtaggið á Instagram til að deila myndum hér</p>
+        <h3>Instagram #champion</h3>
+        <p>Notið #champion hashtaggið á Instagram til að birta myndrænt pepp hér</p>
+        <div id="instagram">
+        </div>
         
       </div>
     </div>
