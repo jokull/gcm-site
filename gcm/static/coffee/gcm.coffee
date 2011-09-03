@@ -42,7 +42,13 @@ $ ->
       GCM.collections.instagram = new Instagram
       GCM.views.instagram = new InstagramView collection: GCM.collections.instagram
       GCM.collections.instagram.add  data.data
-    
+  
+  $.ajax
+    url: 'http://api.twitter.com/1/users/show.json?screen_name=meistaramanudur&include_entities=true'
+    dataType: "jsonp"
+    success: (data, status) =>
+      GCM.models.tweet = new Tweet data.status
+      GCM.views.tweet = new TweetView model: GCM.models.tweet
 
 
 class FriendView extends Backbone.View
@@ -114,7 +120,7 @@ class PersonView extends Backbone.View
     url = (@$ "form").attr "action"
     $.post url, (@$ ":input").serialize(), (data, status) =>
       if data.errors
-        @flash data.errors[0]
+        @flash (_.values data.errors).join('<br>')
       else
         GCM.models.person.set data
         @flash "Vistað"

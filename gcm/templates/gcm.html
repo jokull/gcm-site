@@ -30,6 +30,10 @@
   window.GCM = {{ js|tojson|safe }};
   </script>
   
+  <script type="text/template" id="tpl-tweet">
+    <%= text %>
+  </script>
+  
   <script type="text/template" id="tpl-tumblr-post">
     <% if(title){ %>
       <h2 class="title">
@@ -112,26 +116,26 @@
         <ul class="questions">
           <li>
             <h4>Hvað er Meistaramánuðurinn?</h4>
-            <p>30 dagar sem munu ögra þátttakendum líkamlega og andlega í átt að því að verða meistarar eigin lífs.</p>
+            <p>30 dagar sem munu ögra þátttakendum líkamlega 
+              og andlega í átt að því að verða meistarar eigin 
+              lífs.</p>
+            <p>Meistaramánuðurinn felst í því að þátttakendur 
+              vakna fyrr, hreyfa sig ásamt því að borða og 
+              njóta lífsins betur en aðra daga. Við leggjum 
+              upp með að fólk skori á sjálft sig og leitist 
+              við að sigra sjálfan sig í raunum mánaðarins. 
+              Lagt er upp með að þátttakendur neiti sér um 
+              áfengi þessa 30 daga og innbyrði fyrst og fremst 
+              fæðu sem mannslíkaminn er skapaður til þess að 
+              neita, svokallað hellisbúafæði (e. paleo diet). 
+              Með því að vakna fyrr munu þátttakendur <br>
+              koma fleiru í verk heldur en náunginn. <br>
+              Þar af leiðandi líður þátttakenda <br>
+              eins og meistara, þú hefur jú <br>
+              sigrað samborgara þína og <br>
+              sjálfan þig.</p>
           </li>
-          <li>
-            <h4>Hverjir taka þátt?</h4>
-            <p>Allir sem vilja. Til að skrá þig og sjá hvaða vinir þínir eru að taka þátt gæti verið gaman að fylla út skráningarformið neðst á síðunni.</p>
-          </li>
-          <li>
-            <h4>Hverjar eru leikreglurnar?</h4>
-            <p>Það er í valdi hvers meistara að setja sér þann 
-              ramma sem skilgreinir meistaralegan lífsstíl.
-              Við leggjum til að þáttakendur sleppi
-              áfengisneyslu og bæti svo öðrum
-              markmiðum við þá miðju <br> sem 
-              meistararnir hafa sameiginlega.
-              Fyrir <br> þá sem eru örlítið "lost"
-              er ekki vitlaust <br> að kynna sér 
-              mataræði <br> forfeðranna, sem og 
-              lífsstíl þeirra.
-            </p>
-          </li>
+          <li class="signup"><a href="#signup">Skráning</a></li>
         </ul>
       </div>
       <div class="eleven columns">
@@ -142,6 +146,11 @@
                allowfullscreen="true" 
                allowscriptaccess="never" 
                salign="tl" wmode="opaque" flashvars="width=640&amp;height=359">
+        
+        <div id="twitter">
+          <a href="http://www.twitter.com/meistaramanudur">@meistaramanudur</a>: <span id="tweet"></span>
+        </div>
+        
       </div>
       <div class="seperator"></div>
     </div>
@@ -167,7 +176,7 @@
     </div>
       
     
-    <footer class="container">
+    <div id="signup" class="container">
       
       <div class="signup">
         
@@ -192,8 +201,16 @@
         <iframe src="http://www.facebook.com/plugins/like.php?app_id=119121324855933&amp;href=http%3A%2F%2Fwww.globalchampionmonth.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
       </div>
       
-    </footer>
+    </div>
     
+    <div class="container">
+      <div class="eight columns">
+        &nbsp;
+      </div>
+      <div id="contact" class="eight columns">
+        <em><a href="mailto:mb@44.is">Contact</a></em>
+      </div>
+    </div>  
     
   </div>
   

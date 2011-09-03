@@ -1,5 +1,6 @@
 body { font-family: futura-pt, sans-serif; 
-       color: #FFFFCC; background: #1A1600; }
+       color: #FFFFCC; background: #1A1600;
+       font-size: 12pt; }
 
 h1, h2, h3, h4, h5, h6, p, li { color: #FFFFCC; 
                                 font-family: futura-pt, sans-serif; line-height: 105%; }
@@ -8,7 +9,6 @@ a, a:active, a:hover, a:visited { color: #FFFFFF; text-decoration: none;
 
 #content { margin: 30px 0; }
 
-header {  }
 header * { text-align: center; }
 body { visibility: hidden; }
 .wf-active body * { visibility: visible; }
@@ -16,7 +16,8 @@ header h1 { font-family: quatro-slab; text-transform: uppercase; font-size: 90pt
 header h2 { font-weight: bold; }
 header h3 { font-weight: bold; margin-bottom: 60px; }
 
-.section-1 { padding-bottom: 60px; }
+.section-1 { padding-bottom: 20px; }
+.section-1 .signup { position: relative; z-index: 120; }
 
 div.seperator { position: absolute; width: 940px; height: 175px;
                 left: 10px; bottom: 0; 
@@ -37,12 +38,15 @@ div.instagram { padding: 20px 0; }
 #instagram .post .date,
 #instagram .post .caption { display: none; }
 
-footer .signup { padding: 100px 0; }
-footer .signup .login { border: 0; }
-footer .signup .login img { padding-bottom: 20px; }
-footer .signup .call-to-action { text-align: center; }
+#signup { padding: 100px 0; }
+#signup .login { border: 0; }
+#signup .login img { padding-bottom: 20px; }
+#signup .call-to-action { text-align: center; }
 
-footer .signup .friends { list-style: none; margin: 0; }
-footer .signup .friends img { border-radius: 25px; vertical-align: -25px; margin-right: 6px; }
+#signup .friends { list-style: none; margin: 0; }
+#signup .friends img { border-radius: 25px; vertical-align: -25px; margin-right: 6px; }
+
+#twitter { position: relative; top: 30px; z-index: 100; height: 50px; padding-left: 55px; background: url(../images/twitter.png) no-repeat; }
+#contact { text-align: right; }
 
 .help_text { font-weight: bold; color: white; }

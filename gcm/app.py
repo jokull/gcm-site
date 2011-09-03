@@ -25,6 +25,7 @@ assets.register('gcm', Bundle(
     'js/auth.js', 
     'js/tumblr.js',
     'js/instagram.js',
+    'js/twitter.js',
     'js/gcm.js', 
     # filters='jsmin', 
     output='gen/gcm.js'))
