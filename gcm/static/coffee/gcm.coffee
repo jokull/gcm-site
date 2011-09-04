@@ -135,7 +135,7 @@ class PersonView extends Backbone.View
 
 class LoginView extends Backbone.View
   
-  el: ".signup"
+  el: "#signup .signup"
   
   events: 
     "click a.login": "login"
