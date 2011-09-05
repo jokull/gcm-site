@@ -14,10 +14,11 @@ body { visibility: hidden; }
 .wf-active body * { visibility: visible; }
 header h1 { font-family: quatro-slab; text-transform: uppercase; font-size: 90pt; }
 header h2 { font-weight: bold; }
-header h3 { font-weight: bold; margin-bottom: 60px; }
+header h3 { font-weight: bold; }
+header .like-button { margin: 20px 0 60px 165px;  }
 
 .section-1 { padding-bottom: 20px; }
-.section-1 .signup { position: relative; z-index: 120; }
+.section-1 .facebook { position: relative; z-index: 120; }
 
 div.seperator { position: absolute; width: 940px; height: 175px;
                 left: 10px; bottom: 0; 
@@ -42,11 +43,23 @@ div.instagram { padding: 20px 0; }
 #signup .login { border: 0; }
 #signup .login img { padding-bottom: 20px; }
 #signup .call-to-action { text-align: center; }
+#signup .person { text-align: center; }
+#signup .person input[type=text] { display: inline; }
 
 #signup .friends { list-style: none; margin: 0; }
-#signup .friends img { border-radius: 25px; vertical-align: -25px; margin-right: 6px; }
+#signup .friends li { overflow: hidden; min-height: 50px; }
+#signup .friends .picture { width: 50px; height: 50px; 
+                            position: absolute; display: block; 
+                            border: 0; }
+#signup .friends .picture img { border-radius: 25px; vertical-align: -25px; }
+#signup .friends .name,
+#signup .friends .posting { margin-left: 60px; font-size: 10pt; }
+#signup .friends .name { padding-top: 8px; line-height: 20px; font-size: 12pt; 
+                         color: #FFFFCC; border: 0; font-weight: bold; }
+#signup .friends .posting a { line-height: 105%; display: block; border: 0; }
 
 #twitter { position: relative; top: 30px; z-index: 100; height: 50px; padding-left: 55px; background: url(../images/twitter.png) no-repeat; }
 #contact { text-align: right; }
 
 .help_text { font-weight: bold; color: white; }
+

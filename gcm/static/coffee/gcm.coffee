@@ -36,7 +36,7 @@ $ ->
       GCM.collections.tumblr.add  data.response.posts
   
   $.ajax
-    url: 'https://api.instagram.com/v1/tags/champion/media/recent?count=5&client_id=' + GCM.instagram_id
+    url: 'https://api.instagram.com/v1/tags/meistaram/media/recent?count=5&client_id=' + GCM.instagram_id
     dataType: "jsonp"
     success: (data, status) =>
       GCM.collections.instagram = new Instagram
@@ -54,6 +54,7 @@ $ ->
 class FriendView extends Backbone.View
   
   tagName: "li"
+  className: "one-third column"
   
   initialize: (options) ->
     @model.bind "change", @render
@@ -159,6 +160,7 @@ GCM.connected_callback = (response) ->
   GCM.collections.friends.add response.friends
   GCM.models.person = new Person response
   GCM.views.person = new PersonView model: GCM.models.person
+  GCM.collections.friends.add GCM.models.person
 
 window.fbAsyncInit = ->
   FB.Canvas.setSize()
