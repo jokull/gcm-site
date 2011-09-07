@@ -35,12 +35,14 @@
   </script>
   
   <script type="text/template" id="tpl-tumblr-post">
-    <% if(title){ %>
+    <% if(typeof title !== "undefined"){ %>
       <h2 class="title">
         <a href="<%= post_url %>"><%= title %></a>
       </h2>
     <% } %>
-    <%= body %>
+    <% if(typeof body !== "undefined"){ %>
+      <%= body %>
+    <% } %>
   </script>
   
   <script type="text/template" id="tpl-instagram-post">
@@ -200,7 +202,11 @@
         </div>
         
         <ol class="friends">
-          
+          <li class="one-third column">
+            <a target="_blank" class="picture">
+              <img src="{{ url_for('static', filename="images/empty-face.png") }}"></a>
+            <a class="name">Meistarinn Þú</a>
+          </li>
         </ol>
       
       </div>
