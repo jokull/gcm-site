@@ -55,7 +55,10 @@ def connect():
 @app.route('/', methods=['GET'])
 def gcm():
     
+    person_count = Person.query.count()
+    
     js = dict(
+        person_count=person_count,
         graph_id=current_app.config['GRAPH_API'][0],
         instagram_id=current_app.config['INSTAGRAM_API'][0],
         tumblr_id=current_app.config['TUMBLR_API'][0],

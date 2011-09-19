@@ -13,7 +13,7 @@ from flaskext.login import (LoginManager, current_user, login_required,
 
 app = Flask(__name__)
 app.config.from_object('gcm.config.%s' % os.environ.get('GCM_CONFIG', 'production'))
-
+        
 
 assets = Environment(app)
 assets.register('gcm', Bundle(
