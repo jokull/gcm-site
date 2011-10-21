@@ -101,7 +101,7 @@ def admin():
 def calendar():
     g.redis.incr('gcm:calender_count')
     return redirect(url_for('static', 
-        filename="downloads/Meistaramanudur_Dagatal_HQ.pdf?kerned"))
+        filename="downloads/Meistaramanudur_Dagatal_HQ_1.pdf"))
 
 @app.route('/calendar/stats')
 def calender_stats():
