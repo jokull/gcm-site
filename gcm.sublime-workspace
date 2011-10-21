@@ -1,0 +1,475 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "gcm/static/coffee/gcm.coffee",
+			"settings":
+			{
+				"buffer_size": 4539,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gcm/static/coffee/tumblr.coffee",
+			"settings":
+			{
+				"buffer_size": 616,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 71 files for \"FB.login\"\n\n/Users/jokull/Code/gcm/gcm/static/coffee/gcm.coffee:\n  153    login: (e) =>\n  154      e.preventDefault()\n  155:     FB.login ->\n  156  \n  157  GCM.connected_callback = (response) ->\n\n/Users/jokull/Code/gcm/gcm/static/js/gcm.js:\n  230      LoginView.prototype.login = function(e) {\n  231        e.preventDefault();\n  232:       return FB.login(function() {});\n  233      };\n  234      return LoginView;\n\n/Users/jokull/Code/gcm/gcm/static/js/tab.js:\n  102      LoginView.prototype.login = function(e) {\n  103        e.preventDefault();\n  104:       return FB.login(function() {});\n  105      };\n  106      return LoginView;\n\n3 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 684,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "gcm/app.py",
+			"settings":
+			{
+				"buffer_size": 2323,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gcm/views.py",
+			"settings":
+			{
+				"buffer_size": 2716,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gcm/templates/gcm.html",
+			"settings":
+			{
+				"buffer_size": 9552,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jokull/Code/jl-site/jl/static/stylesheets/skeleton.css",
+		"/Users/jokull/Code/jl-site/jl/static/javascript/jl.js",
+		"/Users/jokull/Code/jl-site/jl/app.py",
+		"/Users/jokull/Code/jl-site/jl/static/javascript/twitter.js",
+		"/Users/jokull/Code/jl-site/jl/templates/index.html",
+		"/Users/jokull/Code/minatura/minatura/templates/environment.html",
+		"/Users/jokull/Code/minatura/minatura/templates/projects.html",
+		"/Users/jokull/Code/cfr/cfr/models/champion.py",
+		"/Users/jokull/Code/minatura/minatura/templates/economies.html",
+		"/Users/jokull/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/Users/jokull/Code/gcm/gcm/auth.py",
+		"/Users/jokull/Code/gcm/gcm/deploy",
+		"/Users/jokull/Code/gcm/gcm/decorators.py",
+		"/Users/jokull/Code/gcm/gcm/views.py",
+		"/Users/jokull/Code/gcm/gcm/app.py",
+		"/Users/jokull/Code/gcm/gcm/templates/admin.html",
+		"/Users/jokull/Code/gcm/gcm/templates/gcm.html",
+		"/Users/jokull/Library/Application Support/Sublime Text 2/Packages/User/Global.sublime-settings"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 88.0,
+		"include_history":
+		[
+			"",
+			"about_sub"
+		],
+		"location_history":
+		[
+			"/Users/jokull/Code/gcm/gcm",
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"FB.login",
+			"connected_callback",
+			" -->",
+			"<!-- ",
+			"<!--",
+			" »",
+			"gcm",
+			"about_sub",
+			"    "
+		],
+		"highlight": true,
+		"in_selection": true,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" #}",
+			"{# ",
+			"{#",
+			"",
+			"cfr",
+			"  "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "gcm/static/coffee/gcm.coffee",
+					"settings":
+					{
+						"buffer_size": 4539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1155,
+								1155
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"tab_size": 2.0,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "gcm/static/coffee/tumblr.coffee",
+					"settings":
+					{
+						"buffer_size": 616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								281,
+								281
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"tab_size": 2.0,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"settings":
+					{
+						"buffer_size": 684,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										152,
+										160
+									],
+									[
+										370,
+										378
+									],
+									[
+										590,
+										598
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								157,
+								157
+							]
+						],
+						"settings":
+						{
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"tab_size": 2.0,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "gcm/app.py",
+					"settings":
+					{
+						"buffer_size": 2323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4.0,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 103.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "gcm/views.py",
+					"settings":
+					{
+						"buffer_size": 2716,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1660,
+								1607
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4.0,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 610.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "gcm/templates/gcm.html",
+					"settings":
+					{
+						"buffer_size": 9552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								9552
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2.0,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"gcm.ht",
+				"templates/gcm.html"
+			],
+			[
+				"tumb",
+				"static/coffee/tumblr.coffee"
+			],
+			[
+				"views",
+				"views.py"
+			],
+			[
+				"app",
+				"app.py"
+			],
+			[
+				"skele",
+				"static/stylesheets/skeleton.css"
+			],
+			[
+				"base",
+				"templates/base.html"
+			],
+			[
+				"coffee",
+				"static/coffee/astarkort.coffee"
+			],
+			[
+				"about",
+				"templates/about.html"
+			],
+			[
+				"environm",
+				"templates/environment.html"
+			],
+			[
+				"inde",
+				"templates/index.html"
+			],
+			[
+				"envir",
+				"templates/environment.html"
+			],
+			[
+				"index",
+				"templates/index.html"
+			],
+			[
+				"base.ht",
+				"templates/base.html"
+			],
+			[
+				"css",
+				"static/css/style.css"
+			],
+			[
+				"hr",
+				"templates/english/locations/hr.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 196.69921875,
+	"status_bar_visible": true
+}

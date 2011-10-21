@@ -97,6 +97,13 @@ def admin():
         )
     )
 
+@app.route('/calendar')
+def calendar():
+    g.redis.incr('gcm:calender_count')
+    return redirect(url_for('static', 
+        filename="downloads/Meistaramanudur_Dagatal_HQ.pdf?kerned"))
 
-
+@app.route('/calendar/stats')
+def calender_stats():
+    return jsonify(count=g.redis.get('gcm:calender_count'))
 

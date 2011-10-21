@@ -1,5 +1,5 @@
 body { font-family: futura-pt, sans-serif; 
-       color: #FFFFCC; background: #1A1600;
+       color: #FFFFCC; background: #2b2313;
        font-size: 12pt; }
 
 h1, h2, h3, h4, h5, h6, p, li { color: #FFFFCC; 
@@ -10,8 +10,6 @@ a, a:active, a:hover, a:visited { color: #FFFFFF; text-decoration: none;
 #content { margin: 30px 0; }
 
 header * { text-align: center; }
-body { visibility: hidden; }
-.wf-active body * { visibility: visible; }
 header h1 { font-family: quatro-slab; text-transform: uppercase; font-size: 90pt; }
 header h2 { font-weight: bold; }
 header h3 { font-weight: bold; }
@@ -20,20 +18,20 @@ header .like-button { margin: 20px 0 60px 165px;  }
 .section-1 { padding-bottom: 20px; }
 .section-1 .facebook { position: relative; z-index: 120; }
 
-div.seperator { position: absolute; width: 940px; height: 175px;
-                left: 10px; bottom: 0; 
-                background: url(../images/pattern-1.png) left bottom no-repeat; }
+.questions { background: url(../images/hero.png) right bottom no-repeat; padding-bottom: 14px; }
 
-div.blog { padding: 20px 0; }
+div.blog { padding: 20px 0; border-top: 1px solid #FFFFCC;  }
 #tumblr { margin-bottom: 30px; }
+#tumblr .tumblr-post { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.3); }
 #tumblr h2.title { margin-bottom: 20px; }
 #tumblr h2 a { border: 0; font-weight: bold; }
-#tumblr p { line-height: 130%; font-size: 12pt; }
+#tumblr p { line-height: 130%; font-size: 12pt; width: 80%; }
 #tumblr p.permalink { text-align: right; width: 100%; }
 
-div.instagram { padding: 20px 0; }
+div.instagram {  border-top: 1px solid #FFFFCC;  padding: 20px 0; }
+div.instagram h3 { padding: 8px 0 12px 80px; background: url(../images/instagram-logo.png) no-repeat; font-weight: bold; text-shadow: 0 1px 0 rgba(0,0,0,.3); }
 #instagram .post { padding: 5px; background: white; margin-bottom: 12px; }
-#instagram .post img { width: 270px; height: 270px; }
+#instagram .post img { width: 100%; }
 #instagram .post p { margin-bottom: 4px; }
 #instagram .post .user { color: black; font-size: 12pt; }
 #instagram .post .date,
@@ -65,3 +63,10 @@ div.instagram { padding: 20px 0; }
 
 h1.champcount { text-align: center; padding: 30px 0; }
 #signup hr { margin-top: 20px; }
+
+.calendar { text-align: center; }
+.calendar img { margin-right: 100px; }
+.calendar a { border-bottom: 0; }
+.calendar .signage { font-family: quatro-slab; 
+	text-transform: uppercase; font-size: 20pt; display: block;
+	text-decoration: underline; }
