@@ -25,6 +25,10 @@
   <link rel="stylesheet" href="{{ url_for('.static', filename="css/skeleton.css", v=g.deploy) }}">
   <link rel="stylesheet" href="{{ url_for('.static', filename="css/gcm.css", v=g.deploy) }}">
   <link rel="stylesheet" href="{{ url_for('.static', filename="jquery-ui/jquery-ui-1.8.14.custom.css", v=g.deploy) }}">
+
+  <script type="text/javascript" src="http://use.typekit.com/nzf8tvx.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   
   <script>
   window.GCM = {{ js|tojson|safe }};
@@ -142,7 +146,9 @@
               sigrað samborgara þína og <br>
               sjálfan þig.</p>
           </li>
-          <li class="facebook" style="font-size: 9pt"><a href="http://www.facebook.com/meistaramanudur">facebook.com/meistaramanudur</a></li>
+          <li class="facebook">
+            <a href="http://www.facebook.com/meistaramanudur">facebook.com/meistaramanudur</a>
+          </li>
         </ul>
       </div>
       <div class="eleven columns">
@@ -190,6 +196,7 @@
         <p>Notið #meistaram hashtaggið á Instagram til að birta myndrænt pepp hér</p>
         <div id="instagram">
         </div>
+        <a class="more" href="http://web.stagram.com/tag/meistaram/?vm=grid" targe="_blank">Fleiri myndir</a>
         
       </div>
     </div>
@@ -220,7 +227,16 @@
         </ol>
         
         <h1 class="row champcount">{{ person_count }} meistarar skráðir til leiks</h1>
-      
+
+        <div class="blogs row">
+          <h2>Meistarabloggin</h2>
+          <ul class="blogs">
+          {% for url in blogs %}
+            <li><a href="{{ url }}">{{ url }}</a></li>
+          {% endfor %}
+          </ul>
+        </div>
+
       </div>
       
     </div>
@@ -249,28 +265,6 @@
         '//connect.facebook.net/en_US/all.js';
       document.getElementById('fb-root').appendChild(e);
     }());
-  </script>
-  
-  <script>
-    TypekitConfig = {
-      kitId: 'nzf8tvx',
-      timeout: 3000
-    };
-    (function() {
-      $('html').addClass('wf-loading');
-      var t = setTimeout(function() {
-        $('html').removeClass('wf-loading').addClass('wf-inactive');
-      }, TypekitConfig.scriptTimeout);
-      $.ajax({
-        url: '//use.typekit.com/' + TypekitConfig.kitId + '.js',
-        dataType: 'script',
-        cache: true,
-        success: function() {
-          clearTimeout(t);
-          try { Typekit.load(TypekitConfig); } catch (e) {}
-        }
-      });
-    })();
   </script>
   
   <script>

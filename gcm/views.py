@@ -70,6 +70,7 @@ def gcm():
     )
     
     form = SignupForm(action=url_for('signup')).as_widget()
+    blogs = [p.blog_url for p in Person.query.filter(Person.blog_url!=None)]
         
     return render_template('gcm.html', **locals())
 

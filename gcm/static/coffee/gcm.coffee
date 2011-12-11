@@ -27,7 +27,7 @@ $ ->
   ($ ".ie [placeholder]").placeholder()
   
   $.ajax
-    url: 'http://api.tumblr.com/v2/blog/meistaramanudur.tumblr.com/posts/json?type=text&limit=3&api_key=' + GCM.tumblr_id
+    url: 'http://api.tumblr.com/v2/blog/meistaramanudur.tumblr.com/posts/json?type=text&limit=4&api_key=' + GCM.tumblr_id
     dataType: "jsonp"
     jsonp: "jsonp"
     success: (data, status) =>
@@ -37,7 +37,7 @@ $ ->
       GCM.collections.tumblr.add data.response.posts
   
   $.ajax
-    url: 'https://api.instagram.com/v1/tags/meistaram/media/recent?count=5&client_id=' + GCM.instagram_id
+    url: 'https://api.instagram.com/v1/tags/meistaram/media/recent?count=6&client_id=' + GCM.instagram_id
     dataType: "jsonp"
     success: (data, status) =>
       GCM.collections.instagram = new Instagram

@@ -1,9 +1,12 @@
-body { font-family: futura-pt, sans-serif; 
+body { font-family: 'Lucida Grande', Helvetica, sans-serif;
        color: #FFFFCC; background: #2b2313;
-       font-size: 12pt; }
+       font-size: 11pt; }
 
-h1, h2, h3, h4, h5, h6, p, li { color: #FFFFCC; 
-                                font-family: futura-pt, sans-serif; line-height: 105%; }
+body, strong, h1, h2, h3, h4, h5, h6, p, li { color: #FFFFCC; }
+
+p { font-size: 9pt; }
+
+h1, h2, h3, h4, h5, h6, p, li { font-family: 'Lucida Grande', Helvetica, sans-serif; line-height: 105%; }
 a, a:active, a:hover, a:visited { color: #FFFFFF; text-decoration: none;
                                   border-bottom: 1px solid rgba(255,255,255,.1); }
 
@@ -25,13 +28,15 @@ div.blog { padding: 20px 0; border-top: 1px solid #FFFFCC;  }
 #tumblr .tumblr-post { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.3); }
 #tumblr h2.title { margin-bottom: 20px; }
 #tumblr h2 a { border: 0; font-weight: bold; }
-#tumblr p { line-height: 130%; font-size: 12pt; width: 80%; }
+#tumblr p { line-height: 130%; width: 80%; }
 #tumblr p.permalink { text-align: right; width: 100%; }
 
 div.instagram {  border-top: 1px solid #FFFFCC;  padding: 20px 0; }
 div.instagram h3 { padding: 8px 0 12px 80px; background: url(../images/instagram-logo.png) no-repeat; font-weight: bold; text-shadow: 0 1px 0 rgba(0,0,0,.3); }
 #instagram .post { padding: 5px; background: white; margin-bottom: 12px; }
 #instagram .post img { width: 100%; }
+#instagram .post img[align=left] { margin-right: 10px; }
+
 #instagram .post p { margin-bottom: 4px; }
 #instagram .post .user { color: black; font-size: 12pt; }
 #instagram .post .date,
@@ -51,8 +56,8 @@ div.instagram h3 { padding: 8px 0 12px 80px; background: url(../images/instagram
                             border: 0; }
 #signup .friends .picture img { border-radius: 25px; vertical-align: -25px; }
 #signup .friends .name,
-#signup .friends .posting { margin-left: 60px; font-size: 10pt; }
-#signup .friends .name { padding-top: 8px; line-height: 20px; font-size: 12pt; 
+#signup .friends .posting { margin-left: 60px; font-size: 9pt; }
+#signup .friends .name { padding-top: 8px; line-height: 20px; font-size: 10pt; 
                          color: #FFFFCC; border: 0; font-weight: bold; }
 #signup .friends .posting a { line-height: 105%; display: block; border: 0; }
 
@@ -62,6 +67,9 @@ div.instagram h3 { padding: 8px 0 12px 80px; background: url(../images/instagram
 .help_text { font-weight: bold; color: white; }
 
 h1.champcount { text-align: center; padding: 30px 0; }
+.blogs h2 { text-align: center; }
+.blogs li { text-align: center; }
+
 #signup hr { margin-top: 20px; }
 
 .calendar { text-align: center; }
@@ -70,3 +78,4 @@ h1.champcount { text-align: center; padding: 30px 0; }
 .calendar .signage { font-family: quatro-slab; 
 	text-transform: uppercase; font-size: 20pt; display: block;
 	text-decoration: underline; }
+
