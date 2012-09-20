@@ -10,17 +10,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Meistaramánuður</title>
-  
+
   <meta name="description" content="30 dagar sem munu ögra þátttakendum líkamlega og andlega í átt að því að verða meistarar eigin lífs">
-  
+
   <meta property="og:title" content="Meistaramánuður">
   <meta property="og:url" content="http://www.globalchampionmonth.com/">
   <meta property="og:image" content="{{ url_for('.static', filename="images/favicon.png", v=g.deploy, _external=True) }}">
   <meta property="fb:admins" content="704142018">
-  
+
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <link rel="shortcut icon" href="{{ url_for('.static', filename="images/favicon.png", v=g.deploy) }}">
-  
+
   <link rel="stylesheet" href="{{ url_for('.static', filename="css/base.css", v=g.deploy) }}">
   <link rel="stylesheet" href="{{ url_for('.static', filename="css/skeleton.css", v=g.deploy) }}">
   <link rel="stylesheet" href="{{ url_for('.static', filename="css/gcm.css", v=g.deploy) }}">
@@ -29,15 +29,15 @@
   <script type="text/javascript" src="http://use.typekit.com/nzf8tvx.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-  
+
   <script>
   window.GCM = {{ js|tojson|safe }};
   </script>
-  
+
   <script type="text/template" id="tpl-tweet">
     <%= ified %>
   </script>
-  
+
   <script type="text/template" id="tpl-tumblr-post">
     <% if(typeof title !== "undefined"){ %>
       <h2 class="title">
@@ -48,7 +48,7 @@
       <%= body %>
     <% } %>
   </script>
-  
+
   <script type="text/template" id="tpl-instagram-post">
     <a href="<%= link %>"><img src="<%= images.low_resolution.url %>"></a>
     <p class="date"><%= created_time %></p>
@@ -57,7 +57,7 @@
     <p class="caption"><%= caption.text %></p>
     <% } %>
   </script>
-   
+
   <script type="text/template" id="tpl-friend">
     <a target="_blank" href="http://www.facebook.com/profile.php?id=<%= graph_id %>" class="picture">
       <img src="<%= picture_url %>"></a>
@@ -73,9 +73,9 @@
   </script>
 
   <script type="text/template" id="tpl-person">
-  
+
     <h4 class=name><%= name %></h4>
-    
+
     {% macro formfield(field, class_='') %}
       <div class="clearfix {{ 'error' if field.errors }}">
         {{ field.label() }}
@@ -91,121 +91,85 @@
       {% endif %}
       </div><!-- /clearfix -->
     {% endmacro %}
-    
+
     {% call form() %}
       {{ formfield(form.blog_url) }}
       {{ formfield(form.twitter_name) }}
     {% endcall %}
-    
+
     <p class="help_text"></p>
-    
+
   </script>
-  
+
 </head>
 <body id="section-{% block section %}index{% endblock %}">
-  
+
   <div id="overlay">
     <div class="inner">
     </div>
   </div>
-  
+
   <div id="content">
-    
+
     <header class="container">
       <div class="sixteen columns">
-        <h2>22. október 2011</h2>
+        <h2>1. október 2012</h2>
         <h1 id="punchout">Meistara<br>mánuður</h1>
-        <h3>Skoraðu á sjálfan þig - Lifðu eins og meistari í 30 daga</h3>
+        <h3>Skoraðu á sjálfan þig - Lifðu eins og meistari í mánuð</h3>
         <div class="like-button">
           <iframe src="http://www.facebook.com/plugins/like.php?app_id=119121324855933&amp;href=http%3A%2F%2Fwww.globalchampionmonth.com%2F&amp;send=false&amp;layout=button_count&amp;width=250&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:21px;" allowTransparency="true"></iframe>
         </div>
       </div>
     </header>
-    
+
     <div class="section-1 container">
-      <div class="five columns">
+      <div class="sixteen columns">
         <ul class="questions">
           <li>
             <h4>Hvað er Meistaramánuðurinn?</h4>
-            <p>30 dagar sem munu ögra þátttakendum líkamlega 
-              og andlega í átt að því að verða meistarar eigin 
-              lífs.</p>
-            <p>Meistaramánuðurinn felst í því að þátttakendur 
-              vakna fyrr, hreyfa sig ásamt því að borða og 
-              njóta lífsins betur en aðra daga. Við leggjum 
-              upp með að fólk skori á sjálft sig og leitist 
-              við að sigra sjálfan sig í raunum mánaðarins. 
-              Lagt er upp með að þátttakendur neiti sér um 
-              áfengi þessa 30 daga og innbyrði fyrst og fremst 
-              fæðu sem mannslíkaminn er skapaður til þess að 
-              neyta, svokallað hellisbúafæði (e. paleo diet). 
-              Með því að vakna fyrr munu þátttakendur <br>
-              koma fleiru í verk heldur en náunginn. <br>
-              Þar af leiðandi líður þátttakenda <br>
-              eins og meistara, þú hefur jú <br>
-              sigrað samborgara þína og <br>
-              sjálfan þig.</p>
+            <p>Þann 1. október hefst Meistaramánuður 2012. Eins og áður, felst Meistaramánuður í því að þátttakendur vakni fyrr, neyti ekki áfengis og hreyfi sig vel ásamt því að borða og njóta lífsins betur en aðra daga. Meistaramánuðurinn er mánuður þar sem við setjum okkur markmið og búum til góðar venjur fyrir alla hina mánuðina. Eina þátttökuskilyrðið er að fólk sé tilbúið að skora sjálft sig á hólm og leitist við að sigrast á raunum mánaðarins. Meistaramánuður stendur yfir til 31.október og mun ögra þátttakendum líkamlega og andlega í átt að því að verða meistarar eigin lífs.</p>
+            <h3><a href="https://www.facebook.com/events/425462210823367/">Skráning í viðburðinn</a></h3>
           </li>
           <li class="facebook">
             <a href="http://www.facebook.com/meistaramanudur">facebook.com/meistaramanudur</a>
           </li>
         </ul>
-      </div>
-      <div class="eleven columns">
-        <div class="calendar">
-          <div class="cta">
-            <a href="{{ url_for('calendar') }}" target="_blank">
-              <img src="{{ url_for('static', filename="images/calendar.png") }}">
-            </a>
-          </div>
-          <a href="{{ url_for('calendar') }}" target="_blank" class="signage">Prenta Dagatalið</a>
-        </div>
-
-      {#
-        <embed type="application/x-shockwave-flash" 
-               src="http://vimeo.com/moogaloop.swf?clip_id=23569694&amp;autoplay=0" 
-               width="640" height="359" 
-               quality="high" scale="scale" 
-               allowfullscreen="true" 
-               allowscriptaccess="never" 
-               salign="tl" wmode="opaque" flashvars="width=640&amp;height=359">
-      #}
         <div id="twitter">
           <a href="http://www.twitter.com/meistaramanudur">@meistaramanudur</a>: <span id="tweet"></span>
         </div>
-        
+
       </div>
       <div class="seperator"></div>
     </div>
-    
+
     <div class="container">
       <div class="blog ten columns">
-        
+
         <h5>Blogg</h5>
-        
+
         <div id="tumblr">
-          
+
         </div>
-        
+
       </div>
       <div class="instagram six columns">
-        
+
         <!-- INSTAGRAM -->
-        
+
         <h3>Instagram #meistaram</h3>
         <p>Notið #meistaram hashtaggið á Instagram til að birta myndrænt pepp hér</p>
         <div id="instagram">
         </div>
         <a class="more" href="http://web.stagram.com/tag/meistaram/?vm=grid" targe="_blank">Fleiri myndir</a>
-        
+
       </div>
     </div>
-      
-    
+
+    {#
     <div id="signup" class="container">
-      
+
       <div class="signup">
-        
+
         <div class="one-third column">
           <div class="call-to-action ">
             <a href="#" class="login">
@@ -217,7 +181,7 @@
             <h4>Smelltu á merkið til að sjá hvaða vinir þínir eru að taka þátt</h4>
           </div>
         </div>
-        
+
         <ol class="row friends">
           <li class="one-third column">
             <a target="_blank" class="picture">
@@ -225,7 +189,7 @@
             <a class="name">Meistarinn Þú</a>
           </li>
         </ol>
-        
+
         <h1 class="row champcount">{{ person_count }} meistarar skráðir til leiks</h1>
 
         <div class="blogs row">
@@ -238,9 +202,10 @@
         </div>
 
       </div>
-      
+
     </div>
-    
+    #}
+
     <div class="container">
       <div class="eight columns">
         &nbsp;
@@ -248,16 +213,16 @@
       <div id="contact" class="eight columns">
         <em><a href="mailto:mb@44.is">Contact</a></em>
       </div>
-    </div>  
-    
+    </div>
+
   </div>
-  
+
   {% assets "gcm" -%}
   <script src="{{ ASSET_URL }}"></script>
   {% endassets -%}
-  
+
   <div id="fb-root"></div>
-    
+
   <script>
     (function() {
       var e = document.createElement('script'); e.async = true;
@@ -266,7 +231,7 @@
       document.getElementById('fb-root').appendChild(e);
     }());
   </script>
-  
+
   <script>
 
     var _gaq = _gaq || [];
@@ -280,6 +245,6 @@
     })();
 
   </script>
-  
+
 </body>
 </html>
