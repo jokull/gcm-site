@@ -1,2 +1,0 @@
-tar c gcm/static/js gcm/static/css | md5 > gcm/deploy
-kraftwerk deploy wodboard.com
